@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --accent-color: #ccc;
+    --highlight-color: #555;
+    --font-primary: 'Arial', sans-serif;
+    --font-secondary: 'Helvetica', sans-serif;
+}
+
+.logo {
+    max-height: 50px;
+    width: auto;
+    display: block;
+    margin-right: 20px;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre iconos */
+}
+.icons img {
+    width: 15px;
+    height: 15px;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.icon:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+}
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 12px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: none;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--accent-color);
+}
+.navbar nav {
+    flex-grow: 1; 
+    margin-right: auto;
+
+}
+.hero {
+    background-image: url('https://fotos.quecochemecompro.com/mercedes-clase-a/mercedes-clase-a-dinamismo-puro.jpg?size=750x400');
+    background-size: cover;
+    background-position: center;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 120px 20px;
+}
+.hero h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* X, Y, difuminado, color */
+    font-size: 2em;
+}
+.hero p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.cars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 50px;
+    white-space: nowrap;
+}
+
+.car-card {
+    background: var(--accent-color);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    flex: 0 0 auto;
+    transition: transform 0.3s;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.car-card img {
+    width: 80%;
+    border-radius: 8px;
+}
+
+.car-card-btn {
+    background: #fff;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+}
+
+.dealer {
+    height: 300px; 
+    padding: 15px;
+}
+
+.dealer h2 {
+    font-family: Merriweather;
+    font-size: 3em; 
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.dealer p {
+    font-size: 1.2em;
+    text-align: left;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.dealer-image {
+    position: relative;
+    width: 100%;
+    height: 20em;
+    margin: auto;
+    background-image: url(assets/fondo\ planeta\ espacio.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 120px 0px;
+}
+
+.dealer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, -50%);
+    background: rgba(255, 255, 255, 0.231); /* Fondo blanco con transparencia */
+    padding: 10px 15px;
+    border-radius: 10px; 
+    text-align: left;
+    font-weight: bold;
+    font-size: 2.5rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px
+}
+
+.dealer-btn {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 8px; /* Bordes redondeados en el botón */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 0;
+    align-self: flex-start;
+}
+
+.features {
+    display: flex;
+    gap: 20px; /* Espacio entre tarjetas */
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Suaviza el desplazamiento */
+    padding: 50px;
+    white-space: nowrap;
+}
+
+.feature {
+    min-width: 300px; /* Ancho mínimo de cada tarjeta */
+    max-width: 100px;
+    background: #e5e5e5;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 0 0 auto;
+    scroll-snap-align: start; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature img {
+    width: 100%;
+    max-height: 180px;
+    border-radius: 8px;
+}
+
+.feature-btn {
+    background: #fff;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.maybach {
+    width: 100%;
+    background: #f4f4f4;
+    padding: 0;
+}
+
+/* Primera imagen grande con texto superpuesto */
+.maybach-image {
+    position: relative;
+    width: 100%;
+}
+
+.maybach-image img {
+    width: 100%;
+    display: block;
+}
+
+.maybach-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    color: #faf7f7;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.maybach-text p {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    padding: 30px;
+    color: #faf7f7;
+    font-size: 0.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.maybach-details {
+    display: flex;
+    align-items: center; /* Alinear verticalmente el texto e imagen */
+    justify-content: space-between; /* Separar texto e imagen */
+    gap: 40px; /* Espacio entre el texto y la imagen */
+    padding: 30px;
+}
+
+.maybach-info {
+    flex: 1; 
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.maybach-wheel {
+    flex: 1; 
+    max-width: 45%;
+    height: auto;
+}
+
+.maybach-footer {
+    background-color: #333; /* Gris oscuro */
+    color: white; /* Texto en blanco para contraste */
+    padding: 20px; 
+    text-align: center;
+    margin-bottom: 0;
+    margin: 0;
+}
+
+.contact-btn {
+    background-color: white;
+    color: black; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 25px;
+    font-size: 16px; 
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efecto transparencia */
+}
+
+.contact-btn:hover {
+    background-color: black; 
+    color: white; 
+}
+
+.footer {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+    margin-bottom: 0;
+    margin: 0;
+}
+
+.footer input {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+.footer button {
+    background: var(--highlight-color);
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.footer button:hover {
+    background: var(--accent-color);
+}
+
+.footer-top {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.privacy-policy {
+    color: white;
+    font-size: 14px;
+}
+
+.privacy-policy a {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+.footer-social {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.footer-social img {
+    width: 24px; /* Ajustar tamaño de íconos */
+    height: 24px;
+}
+
+.footer-links {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+    text-align: left;
+}
+
+.footer-column h4 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+
+ .navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+ }  
+
+ .logo {
+    width: 45px;
+    height: auto;
+ }
+ 
+ .navbar ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    }
+
+    .navbar li {
+    display: block;
+    margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: black;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: auto; 
+        font-size: 3rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        z-index: 9999;
+    }
+    .icons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero p {
+        margin-top: -20px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-btn {
+        width: 40%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .cars {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .button {
+        width: 30%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dealer {
+        width: 100%;
+        height: auto;
+        padding: 5px 15px;
+        margin-bottom: 40px;
+    }
+
+    .maybach-details {
+        flex-direction: column;
+        text-align: center;
+    }
+    .maybach-text {
+        position: absolute;
+        left: 5%;
+        padding: 5px;
+        color: #faf7f7;
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        align-items: flex-start;
+    }
+
+    .maybach-text h2 {
+        left: 30px;
+        top: -40px;
+    }
+
+    .maybach-text p {
+        position: relative;
+        right: 40px;
+        top: -40px;
+        margin-top: 0;
+        font-size: 1rem;
+        text-align: left;
+        max-width: 80%;
+        padding: 20px 20px;
+    }
+
+    .maybach-info, .maybach-wheel {
+        max-width: 100%;
+    }
+    
+    .maybach-footer, .footer {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .dealer-text {
+        width: 50%;
+        max-width: 350px; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-80%, -50%);
+        background: rgba(255, 255, 255, 0.278); 
+        padding: 10px; 
+        border-radius: 5px;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .dealer-text p {
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+
+
+    .dealer-btn {
+        width: auto;
+        max-width: 80%;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .dealer-image {
+        height: 100%;
+        padding: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        text-align: center
+        
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .footer input {
+        width: 100%;
+    }
+    .footer button {
+        margin-top: 15px;
+    }
+}
