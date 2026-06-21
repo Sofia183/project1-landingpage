@@ -23,7 +23,7 @@
 .icons {
     display: flex;
     align-items: center;
-    gap: 15px; /* Espacio entre iconos */
+    gap: 15px;
 }
 .icons img {
     width: 15px;
@@ -33,7 +33,7 @@
     display: block;
 }
 .icon:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    transform: scale(1.1);
 }
 body {
     font-family: var(--font-primary);
@@ -87,7 +87,7 @@ body {
     padding: 120px 20px;
 }
 .hero h2 {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* X, Y, difuminado, color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     font-size: 2em;
 }
 .hero p {
@@ -171,7 +171,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-150%, -50%);
-    background: rgba(255, 255, 255, 0.231); /* Fondo blanco con transparencia */
+    background: rgba(255, 255, 255, 0.231);
     padding: 10px 15px;
     border-radius: 10px; 
     text-align: left;
@@ -187,7 +187,7 @@ body {
     background: var(--secondary-color);
     color: var(--primary-color);
     padding: 8px 16px;
-    border-radius: 8px; /* Bordes redondeados en el botón */
+    border-radius: 8px;
     border: none;
     cursor: pointer;
     transition: background 0.3s;
@@ -197,15 +197,15 @@ body {
 
 .features {
     display: flex;
-    gap: 20px; /* Espacio entre tarjetas */
-    overflow-x: auto; /* Permite desplazamiento horizontal */
-    scroll-snap-type: x mandatory; /* Suaviza el desplazamiento */
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     padding: 50px;
     white-space: nowrap;
 }
 
 .feature {
-    min-width: 300px; /* Ancho mínimo de cada tarjeta */
+    min-width: 300px;
     max-width: 100px;
     background: #e5e5e5;
     padding: 15px;
@@ -240,7 +240,6 @@ body {
     padding: 0;
 }
 
-/* Primera imagen grande con texto superpuesto */
 .maybach-image {
     position: relative;
     width: 100%;
@@ -273,15 +272,15 @@ body {
 
 .maybach-details {
     display: flex;
-    align-items: center; /* Alinear verticalmente el texto e imagen */
-    justify-content: space-between; /* Separar texto e imagen */
-    gap: 40px; /* Espacio entre el texto y la imagen */
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
     padding: 30px;
 }
 
 .maybach-info {
     flex: 1; 
-    text-align: left; /* Alinea el texto a la izquierda */
+    text-align: left;
 }
 
 .maybach-wheel {
@@ -291,8 +290,8 @@ body {
 }
 
 .maybach-footer {
-    background-color: #333; /* Gris oscuro */
-    color: white; /* Texto en blanco para contraste */
+    background-color: #333;
+    color: white;
     padding: 20px; 
     text-align: center;
     margin-bottom: 0;
@@ -308,7 +307,7 @@ body {
     font-size: 16px; 
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Efecto transparencia */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact-btn:hover {
@@ -374,7 +373,7 @@ body {
 }
 
 .footer-social img {
-    width: 24px; /* Ajustar tamaño de íconos */
+    width: 24px;
     height: 24px;
 }
 
